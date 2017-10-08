@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="paneLogin" prefHeight="400.0" prefWidth="400.0"
+            style="-fx-background-color: #383e47;" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.LoginController">
+    <JFXTextField fx:id="txtLogin" focusColor="#ff9651" layoutX="89.0" layoutY="159.0" prefHeight="25.0"
+                  prefWidth="223.0" promptText="Login" style="-fx-prompt-text-fill: #a5a5a5; -fx-text-fill: #ffffff;"
+                  unFocusColor="#b8b8b8">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </JFXTextField>
+    <JFXPasswordField fx:id="txtSenha" focusColor="#ff9651" layoutX="89.0" layoutY="217.0" prefHeight="25.0"
+                      prefWidth="223.0" promptText="Senha"
+                      style="-fx-prompt-text-fill: #a5a5a5; -fx-text-fill: #ffffff;" unFocusColor="#b8b8b8">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </JFXPasswordField>
+    <JFXButton fx:id="btnEntrar" layoutX="89.0" layoutY="283.0" prefHeight="28.0" prefWidth="223.0"
+               style="-fx-background-color: #ff9651; -fx-background-radius: 3px;" text="Entrar">
+        <font>
+          <Font name="System Bold" size="13.0"/>
+        </font>
+    </JFXButton>
+    <Label fx:id="linkEsqueceuSenha" layoutX="142.0" layoutY="343.0" text="Esqueceu a senha?" textFill="WHITE"
+           underline="true">
+        <font>
+          <Font size="14.0"/>
+        </font>
+    </Label>
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="25.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../images/logo.PNG"/>
+    </ImageView>
+    <ImageView fx:id="iconClose" fitHeight="25.0" fitWidth="23.0" layoutX="363.0" layoutY="14.0"
+               onMouseClicked="#closeLogin" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/Delete.png"/>
+    </ImageView>
+</AnchorPane>
