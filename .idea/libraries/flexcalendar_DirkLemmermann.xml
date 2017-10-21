@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="flexcalendar_DirkLemmermann">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../calendarfx-8.4.0-bin/ext/controlsfx-8.40.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../calendarfx-8.4.0-bin/ext/fontawesomefx-commons-8.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../calendarfx-8.4.0-bin/ext/fontawesomefx-fontawesome-4.7.0-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../calendarfx-8.4.0-bin/ext/license4j-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../calendarfx-8.4.0-bin/lib/calendarfx-recurrence-8.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../calendarfx-8.4.0-bin/lib/calendarfx-view-8.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

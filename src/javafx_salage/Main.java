@@ -17,10 +17,10 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         try{
             Parent root = FXMLLoader.load(getClass().getResource("view/Login.fxml"));
-            stage.initStyle(StageStyle.UNDECORATED);
+            stage.initStyle(StageStyle.TRANSPARENT);
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
+            stage.centerOnScreen();
             stage.show();
         }
         catch(Exception e){
