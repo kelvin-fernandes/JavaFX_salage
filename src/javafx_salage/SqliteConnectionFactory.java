@@ -7,7 +7,7 @@ import java.sql.DriverManager;
  *
  * @author kelvin-fernandes
  */
-public class SqliteConnection {
+public class SqliteConnectionFactory {
     public static Connection Connector(){
         try {
             Class.forName("org.sqlite.JDBC");

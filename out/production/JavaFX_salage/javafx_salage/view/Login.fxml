@@ -10,14 +10,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="paneLogin" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #383e47;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.LoginController">
-   <children>
+<AnchorPane id="AnchorPane" fx:id="paneLogin" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #383e47;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.LoginController">
        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-              <Image url="@../images/logomax.png" />
-          </image>
+          <Image url="@../images/logomax.png" />
        </ImageView>
-       <JFXTextField fx:id="txtLogin" focusColor="#ff9651" labelFloat="true" layoutX="89.0" layoutY="159.0" prefHeight="25.0" prefWidth="223.0" promptText="Login" style="-fx-prompt-text-fill: #a5a5a5; -fx-text-fill: #ffffff;" unFocusColor="#b8b8b8">
+       <JFXTextField fx:id="txtLogin" focusColor="#ff9651" labelFloat="true" layoutX="89.0" layoutY="159.0" onAction="#btnEntrarAction" prefHeight="25.0" prefWidth="223.0" promptText="Login" style="-fx-prompt-text-fill: #a5a5a5; -fx-text-fill: #ffffff;" unFocusColor="#b8b8b8">
            <font>
              <Font size="14.0" />
            </font>
@@ -41,14 +38,11 @@
            </font>
        </Label>
        <ImageView fx:id="iconFechar" fitHeight="25.0" fitWidth="23.0" layoutX="363.0" layoutY="14.0" onMouseClicked="#closeLogin" pickOnBounds="true" preserveRatio="true">
-          <image>
-              <Image url="@../images/fechar.png" />
-          </image>
+          <Image url="@../images/fechar.png" />
        </ImageView>
       <Label fx:id="lblStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="358.0" prefHeight="20.0" prefWidth="231.0" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-   </children>
 </AnchorPane>

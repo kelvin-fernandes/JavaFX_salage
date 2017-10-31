@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.PDCUsuariosController">
+   <children>
+      <TableView fx:id="tableUsuarios" editable="true" layoutX="14.0" layoutY="16.0" prefHeight="468.0" prefWidth="370.0">
+        <columns>
+          <TableColumn fx:id="colLogin" maxWidth="150.0" prefWidth="123.0" text="Login" />
+          <TableColumn fx:id="colSenha" maxWidth="150.0" prefWidth="123.0" text="Senha" />
+            <TableColumn fx:id="colAcesso" maxWidth="150.0" prefWidth="123.0" text="Acesso" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

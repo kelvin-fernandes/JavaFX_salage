@@ -1,22 +1,22 @@
-package javafx_salage.model;
+package javafx_salage.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javafx_salage.SqliteConnection;
+import javafx_salage.SqliteConnectionFactory;
 
 /**
  *
  * @author kelvin-fernandes
  */
-public class Login {
+public class LoginDAO {
     
     private Connection connection;
     
-    public Login(){
-        connection = SqliteConnection.Connector();
+    public LoginDAO(){
+        connection = SqliteConnectionFactory.Connector();
         if(connection == null)
             System.exit(1);
     }

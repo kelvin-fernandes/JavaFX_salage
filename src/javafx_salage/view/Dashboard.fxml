@@ -51,10 +51,7 @@
             </JFXButton>
       </VBox>
       <AnchorPane fx:id="paneLogo" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #2A3F54;">
-            <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../images/appicon.png" />
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="97.0" layoutX="23.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="95.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../images/logomin.png" />
             </ImageView>
       </AnchorPane>
