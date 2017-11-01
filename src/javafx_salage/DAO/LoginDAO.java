@@ -14,6 +14,8 @@ import javafx_salage.SqliteConnectionFactory;
 public class LoginDAO {
     
     private Connection connection;
+    private PreparedStatement preparedStatement = null;
+    private ResultSet resultSet = null;
     
     public LoginDAO(){
         connection = SqliteConnectionFactory.Connector();
@@ -28,13 +30,11 @@ public class LoginDAO {
         catch(Exception e){
             e.printStackTrace();
             return false;
-        }        
+        }
     }
 
     public boolean isLogin(String user, String pass) throws SQLException{
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        String query = "Select * from usuario where login_usu = ? and senha_usu = ?";
+        String query = "SELECT * FROM usuario WHERE login_usu = ? AND senha_usu = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
@@ -52,6 +52,7 @@ public class LoginDAO {
         finally {
             preparedStatement.close();
             resultSet.close();
+            connection.close();
         }
     }
 }

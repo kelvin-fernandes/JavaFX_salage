@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="painelDeControle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.PainelDeControleController">
+<AnchorPane fx:id="painelDeControle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.PainelDeControleController">
    <children>
       <JFXButton fx:id="btnUsuarios" layoutX="296.0" layoutY="188.0" onAction="#btnUsuariosAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #ff2b2b;" text=" ">
          <graphic>

@@ -16,12 +16,24 @@ public class Usuario {
         this.id_ace = new SimpleIntegerProperty(id_ace);
     }
 
+    public void setLogin_usu(String login_usu) {
+        this.login_usu.set(login_usu);
+    }
+
     public String getLogin_usu() {
         return login_usu.get();
     }
 
+    public void setSenha_usu(String senha_usu) {
+        this.senha_usu.set(senha_usu);
+    }
+
     public String getSenha_usu() {
         return senha_usu.get();
+    }
+
+    public void setId_ace(int id_ace) {
+        this.id_ace.set(id_ace);
     }
 
     public int getId_ace() {
