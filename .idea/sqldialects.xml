@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/DisciplinasDAO.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/ProfessorDAO.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/SalasDAO.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/src/javafx_salage/DAO/UsuarioDAO.java" dialect="SQLite" />
+  </component>
+</project>

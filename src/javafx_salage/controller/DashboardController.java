@@ -1,6 +1,5 @@
 package javafx_salage.controller;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,7 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
@@ -41,9 +39,9 @@ public class DashboardController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-//             telaPrincipal = FXMLLoader.load(getClass().getResource("../view/TelaPrincipal.fxml"));
-             painelDeControle = FXMLLoader.load(getClass().getResource("../view/PainelDeControle.fxml"));
-//            setNode(telaPrincipal);
+            telaPrincipal = FXMLLoader.load(getClass().getResource("../view/TelaPrincipal.fxml"));
+            painelDeControle = FXMLLoader.load(getClass().getResource("../view/PainelDeControle.fxml"));
+            setNode(telaPrincipal);
         } catch (IOException ex) {
             Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -53,7 +51,7 @@ public class DashboardController implements Initializable{
         paneConteudo.getChildren().clear();
         paneConteudo.getChildren().add(node);
 
-        FadeTransition ft = new FadeTransition(Duration.millis(1500));
+        FadeTransition ft = new FadeTransition(Duration.millis(1000));
         ft.setNode(node);
         ft.setFromValue(0.1);
         ft.setToValue(1);
@@ -63,12 +61,12 @@ public class DashboardController implements Initializable{
     }
 
     @FXML
-    void btnTelaPrincipalAction(ActionEvent event) {
+    void btnTelaPrincipalAction() {
         setNode(telaPrincipal);
     }
 
     @FXML
-    void btnPainelDeControleAction(ActionEvent event) {
+    void btnPainelDeControleAction() {
         setNode(painelDeControle);
     }
 
@@ -86,6 +84,4 @@ public class DashboardController implements Initializable{
             e.printStackTrace();
         }
     }
-
-
 }

@@ -3,27 +3,31 @@ package javafx_salage.DAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx_salage.SqliteConnectionFactory;
-import javafx_salage.model.Usuario;
-import java.sql.*;
+import javafx_salage.model.Professor;
 
-public class UsuarioDAO {
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class ProfessorDAO {
     private Connection connection = null;
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
 
-    public UsuarioDAO(){
+    public ProfessorDAO(){
         connection = SqliteConnectionFactory.Connector();
         if(connection == null)
             System.exit(1);
     }
 
-    public boolean isUsuario(String user) throws SQLException{
-        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+    public boolean isProfessor(String rgf) throws SQLException{
+        String query = "SELECT * FROM professor WHERE rgf_prof = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
-
+            preparedStatement.setString(1, rgf);
+            
             resultSet = preparedStatement.executeQuery();
 
             return resultSet.next();
@@ -38,14 +42,13 @@ public class UsuarioDAO {
         }
     }
 
-    public void add(String user, String pass, Integer adm) throws SQLException{
-        String query = "INSERT INTO usuario VALUES (?, ?, ?)";
+    public void add(String rgf, String nome) throws SQLException{
+        String query = "INSERT INTO professor VALUES (?, ?)";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
-            preparedStatement.setString(2, pass);
-            preparedStatement.setInt(3, adm);
+            preparedStatement.setString(1, rgf);
+            preparedStatement.setString(2, nome);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -57,12 +60,12 @@ public class UsuarioDAO {
         }
     }
 
-    public void delete(String user) throws SQLException{
-        String query = "DELETE FROM usuario WHERE login_usu = ?";
+    public void delete(String rgf) throws SQLException{
+        String query = "DELETE FROM professor WHERE rgf_prof = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
+            preparedStatement.setString(1, rgf);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -74,20 +77,19 @@ public class UsuarioDAO {
         }
     }
 
-    public Usuario find(String usu) throws SQLException{
-        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+    public Professor find(String prof) throws SQLException{
+        String query = "SELECT * FROM professor WHERE rgf_prof = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, usu);
+            preparedStatement.setString(1, prof);
 
             resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
-                return new Usuario(
-                        resultSet.getString("login_usu"),
-                        resultSet.getString("senha_usu"),
-                        resultSet.getInt("id_ace"));
+            if(resultSet.next()){
+                return new Professor(
+                        resultSet.getString("rgf_prof"),
+                        resultSet.getString("nome_prof"));
             }
             return null;
         } catch (SQLException e) {
@@ -100,21 +102,14 @@ public class UsuarioDAO {
         }
     }
 
-    public void update(String user, String pass, Integer ace) throws SQLException{
-        String query1 = "UPDATE usuario SET senha_usu = ? WHERE login_usu = ?";
-        String query2 = "UPDATE usuario SET id_ace = ? WHERE login_usu = ?";
+    public void update(String rgf, String nome) throws SQLException{
+        String query1 = "UPDATE professor SET nome_prof = ? WHERE rgf_prof = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query1);
-            preparedStatement.setString(1, pass);
-            preparedStatement.setString(2, user);
+            preparedStatement.setString(1, nome);
+            preparedStatement.setString(2, rgf);
             preparedStatement.executeUpdate();
-
-            preparedStatement = connection.prepareStatement(query2);
-            preparedStatement.setInt(1, ace);
-            preparedStatement.setString(2, user);
-            preparedStatement.executeUpdate();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -124,22 +119,21 @@ public class UsuarioDAO {
         }
     }
 
-    public ObservableList<Usuario> getAll() throws SQLException {
-        ObservableList<Usuario> usuariosData = FXCollections.observableArrayList();
-        String query = "Select * from usuario";
+    public ObservableList<Professor> getAll() throws SQLException {
+        ObservableList<Professor> professorsData = FXCollections.observableArrayList();
+        String query = "Select * from professor";
 
         try {
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
-                usuariosData.add(new Usuario(
-                        resultSet.getString("login_usu"),
-                        resultSet.getString("senha_usu"),
-                        resultSet.getInt("id_ace")
+                professorsData.add(new Professor(
+                        resultSet.getString("rgf_prof"),
+                        resultSet.getString("nome_prof")
                 ));
             }
-            return usuariosData;
+            return professorsData;
         }
         catch (Exception e){
             e.printStackTrace();

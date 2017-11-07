@@ -3,26 +3,31 @@ package javafx_salage.DAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx_salage.SqliteConnectionFactory;
+import javafx_salage.model.Sala;
 import javafx_salage.model.Usuario;
-import java.sql.*;
 
-public class UsuarioDAO {
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class SalasDAO {
     private Connection connection = null;
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
 
-    public UsuarioDAO(){
+    public SalasDAO(){
         connection = SqliteConnectionFactory.Connector();
         if(connection == null)
             System.exit(1);
     }
 
-    public boolean isUsuario(String user) throws SQLException{
-        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+    public boolean isSala(Integer num) throws SQLException{
+        String query = "SELECT * FROM sala WHERE numero_sala = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
+            preparedStatement.setInt(1, num);
 
             resultSet = preparedStatement.executeQuery();
 
@@ -38,14 +43,14 @@ public class UsuarioDAO {
         }
     }
 
-    public void add(String user, String pass, Integer adm) throws SQLException{
-        String query = "INSERT INTO usuario VALUES (?, ?, ?)";
+    public void add(Integer num, String desc, Integer cap) throws SQLException{
+        String query = "INSERT INTO sala VALUES (?, ?, ?)";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
-            preparedStatement.setString(2, pass);
-            preparedStatement.setInt(3, adm);
+            preparedStatement.setInt(1, num);
+            preparedStatement.setString(2, desc);
+            preparedStatement.setInt(3, cap);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -57,12 +62,12 @@ public class UsuarioDAO {
         }
     }
 
-    public void delete(String user) throws SQLException{
-        String query = "DELETE FROM usuario WHERE login_usu = ?";
+    public void delete(Integer num) throws SQLException{
+        String query = "DELETE FROM sala WHERE numero_sala = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
+            preparedStatement.setInt(1, num);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -74,20 +79,20 @@ public class UsuarioDAO {
         }
     }
 
-    public Usuario find(String usu) throws SQLException{
-        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+    public Sala find(Integer num) throws SQLException{
+        String query = "SELECT * FROM sala WHERE numero_sala = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, usu);
+            preparedStatement.setInt(1, num);
 
             resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
-                return new Usuario(
-                        resultSet.getString("login_usu"),
-                        resultSet.getString("senha_usu"),
-                        resultSet.getInt("id_ace"));
+            if(resultSet.next()){
+                return new Sala(
+                        resultSet.getInt("numero_sala"),
+                        resultSet.getString("descricao_sala"),
+                        resultSet.getInt("capacidade_sala"));
             }
             return null;
         } catch (SQLException e) {
@@ -100,19 +105,19 @@ public class UsuarioDAO {
         }
     }
 
-    public void update(String user, String pass, Integer ace) throws SQLException{
-        String query1 = "UPDATE usuario SET senha_usu = ? WHERE login_usu = ?";
-        String query2 = "UPDATE usuario SET id_ace = ? WHERE login_usu = ?";
+    public void update(Integer num, String desc, Integer cap) throws SQLException{
+        String query1 = "UPDATE sala SET descricao_sala = ? WHERE numero_sala = ?";
+        String query2 = "UPDATE sala SET capacidade_sala = ? WHERE numero_sala = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query1);
-            preparedStatement.setString(1, pass);
-            preparedStatement.setString(2, user);
+            preparedStatement.setString(1, desc);
+            preparedStatement.setInt(2, num);
             preparedStatement.executeUpdate();
 
             preparedStatement = connection.prepareStatement(query2);
-            preparedStatement.setInt(1, ace);
-            preparedStatement.setString(2, user);
+            preparedStatement.setInt(1, cap);
+            preparedStatement.setInt(2, num);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -124,22 +129,22 @@ public class UsuarioDAO {
         }
     }
 
-    public ObservableList<Usuario> getAll() throws SQLException {
-        ObservableList<Usuario> usuariosData = FXCollections.observableArrayList();
-        String query = "Select * from usuario";
+    public ObservableList<Sala> getAll() throws SQLException {
+        ObservableList<Sala> salasData = FXCollections.observableArrayList();
+        String query = "Select * from sala";
 
         try {
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
-                usuariosData.add(new Usuario(
-                        resultSet.getString("login_usu"),
-                        resultSet.getString("senha_usu"),
-                        resultSet.getInt("id_ace")
+                salasData.add(new Sala(
+                        resultSet.getInt("numero_sala"),
+                        resultSet.getString("descricao_sala"),
+                        resultSet.getInt("capacidade_sala")
                 ));
             }
-            return usuariosData;
+            return salasData;
         }
         catch (Exception e){
             e.printStackTrace();

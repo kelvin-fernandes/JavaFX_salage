@@ -3,26 +3,30 @@ package javafx_salage.DAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx_salage.SqliteConnectionFactory;
-import javafx_salage.model.Usuario;
-import java.sql.*;
+import javafx_salage.model.Disciplina;
 
-public class UsuarioDAO {
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class DisciplinasDAO {
     private Connection connection = null;
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
 
-    public UsuarioDAO(){
+    public DisciplinasDAO(){
         connection = SqliteConnectionFactory.Connector();
         if(connection == null)
             System.exit(1);
     }
 
-    public boolean isUsuario(String user) throws SQLException{
-        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+    public boolean isDisciplina(String disc) throws SQLException{
+        String query = "SELECT * FROM disciplina WHERE id_disc = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
+            preparedStatement.setString(1, disc);
 
             resultSet = preparedStatement.executeQuery();
 
@@ -38,14 +42,14 @@ public class UsuarioDAO {
         }
     }
 
-    public void add(String user, String pass, Integer adm) throws SQLException{
-        String query = "INSERT INTO usuario VALUES (?, ?, ?)";
+    public void add(String disc, String nome, Integer qtd) throws SQLException{
+        String query = "INSERT INTO disciplina VALUES (?, ?, ?)";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
-            preparedStatement.setString(2, pass);
-            preparedStatement.setInt(3, adm);
+            preparedStatement.setString(1, disc);
+            preparedStatement.setString(2, nome);
+            preparedStatement.setInt(3, qtd);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -57,12 +61,12 @@ public class UsuarioDAO {
         }
     }
 
-    public void delete(String user) throws SQLException{
-        String query = "DELETE FROM usuario WHERE login_usu = ?";
+    public void delete(String disc) throws SQLException{
+        String query = "DELETE FROM disciplina WHERE id_disc = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, user);
+            preparedStatement.setString(1, disc);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -74,8 +78,8 @@ public class UsuarioDAO {
         }
     }
 
-    public Usuario find(String usu) throws SQLException{
-        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+    public Disciplina find(String usu) throws SQLException{
+        String query = "SELECT * FROM disciplina WHERE id_disc = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
@@ -83,11 +87,11 @@ public class UsuarioDAO {
 
             resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
-                return new Usuario(
-                        resultSet.getString("login_usu"),
-                        resultSet.getString("senha_usu"),
-                        resultSet.getInt("id_ace"));
+            if(resultSet.next()){
+                return new Disciplina(
+                        resultSet.getString("id_disc"),
+                        resultSet.getString("nome_turma"),
+                        resultSet.getInt("qtd_alunos"));
             }
             return null;
         } catch (SQLException e) {
@@ -100,19 +104,19 @@ public class UsuarioDAO {
         }
     }
 
-    public void update(String user, String pass, Integer ace) throws SQLException{
-        String query1 = "UPDATE usuario SET senha_usu = ? WHERE login_usu = ?";
-        String query2 = "UPDATE usuario SET id_ace = ? WHERE login_usu = ?";
+    public void update(String disc, String nome, Integer qtd) throws SQLException{
+        String query1 = "UPDATE disciplina SET nome_turma = ? WHERE id_disc = ?";
+        String query2 = "UPDATE disciplina SET qtd_alunos = ? WHERE id_disc = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query1);
-            preparedStatement.setString(1, pass);
-            preparedStatement.setString(2, user);
+            preparedStatement.setString(1, nome);
+            preparedStatement.setString(2, disc);
             preparedStatement.executeUpdate();
 
             preparedStatement = connection.prepareStatement(query2);
-            preparedStatement.setInt(1, ace);
-            preparedStatement.setString(2, user);
+            preparedStatement.setInt(1, qtd);
+            preparedStatement.setString(2, disc);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -124,22 +128,22 @@ public class UsuarioDAO {
         }
     }
 
-    public ObservableList<Usuario> getAll() throws SQLException {
-        ObservableList<Usuario> usuariosData = FXCollections.observableArrayList();
-        String query = "Select * from usuario";
+    public ObservableList<Disciplina> getAll() throws SQLException {
+        ObservableList<Disciplina> disciplinasData = FXCollections.observableArrayList();
+        String query = "Select * from disciplina";
 
         try {
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
-                usuariosData.add(new Usuario(
-                        resultSet.getString("login_usu"),
-                        resultSet.getString("senha_usu"),
-                        resultSet.getInt("id_ace")
+                disciplinasData.add(new Disciplina(
+                        resultSet.getString("id_disc"),
+                        resultSet.getString("nome_turma"),
+                        resultSet.getInt("qtd_alunos")
                 ));
             }
-            return usuariosData;
+            return disciplinasData;
         }
         catch (Exception e){
             e.printStackTrace();

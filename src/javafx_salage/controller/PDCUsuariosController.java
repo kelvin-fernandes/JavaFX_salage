@@ -3,7 +3,6 @@ package javafx_salage.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
-import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -47,7 +46,6 @@ public class PDCUsuariosController implements Initializable {
 
     private UsuarioDAO usuarioDAO;
     private static Usuario userEditing;
-    private ObservableList<Usuario> usuarios = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -65,7 +63,7 @@ public class PDCUsuariosController implements Initializable {
             colSenha.setCellValueFactory(new PropertyValueFactory<>("senha_usu"));
             colAcesso.setCellValueFactory(new PropertyValueFactory<>("id_ace"));
 
-            usuarios = usuarioDAO.getAll();
+            ObservableList<Usuario> usuarios = usuarioDAO.getAll();
             addTableListener();
             tableUsuarios.setItems(usuarios);
 
@@ -143,7 +141,6 @@ public class PDCUsuariosController implements Initializable {
         }
     }
 
-
     @FXML
     void btnDeletarAction() {
         try {
@@ -167,17 +164,21 @@ public class PDCUsuariosController implements Initializable {
                 isAdm = 2;
 
             Usuario newUser = new Usuario(txtLogin.getText(), txtSenha.getText(), isAdm);
+            Usuario userBD = usuarioDAO.find(txtLogin.getText());
 
             if( txtLogin.getText().isEmpty() || txtSenha.getText().isEmpty())
                 lblStatus.setText("Preencha os campos login e senha!");
-            else if( newUser.getLogin_usu().equals(userEditing.getLogin_usu()) &&
+            else if((newUser.getLogin_usu().equals(userEditing.getLogin_usu()) &&
                      newUser.getSenha_usu().equals(userEditing.getSenha_usu()) &&
-                     newUser.getId_ace() == (userEditing.getId_ace()))
-                lblStatus.setText("Usuário já existente, altere algo!");
+                     newUser.getId_ace() == (userEditing.getId_ace())) ||
+                    (userBD != null &&
+                    (!userBD.getLogin_usu().equals(userEditing.getLogin_usu()))))
+                lblStatus.setText("Usuário já existente!");
             else if(!userEditing.equals(usuarioDAO.find(txtLogin.getText()))){
                 usuarioDAO.delete(userEditing.getLogin_usu());
                 usuarioDAO.add(txtLogin.getText(), txtSenha.getText(), isAdm);
                 limparCamposAdicionar();
+                activeBtnAdicionar();
                 initializeUsuarioTable();
             }
             else{
@@ -203,5 +204,4 @@ public class PDCUsuariosController implements Initializable {
         txtSenha.setText("");
         cbAdm.setSelected(false);
     }
-
 }

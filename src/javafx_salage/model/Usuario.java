@@ -1,42 +1,37 @@
 package javafx_salage.model;
 
-import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleListProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 public class Usuario {
-    private SimpleStringProperty login_usu;
-    private SimpleStringProperty senha_usu;
-    private SimpleIntegerProperty id_ace;
+    private String login_usu;
+    private String senha_usu;
+    private Integer id_ace;
 
     public Usuario(String login_usu, String senha_usu, Integer id_ace) {
-        this.login_usu = new SimpleStringProperty(login_usu);
-        this.senha_usu = new SimpleStringProperty(senha_usu);
-        this.id_ace = new SimpleIntegerProperty(id_ace);
-    }
-
-    public void setLogin_usu(String login_usu) {
-        this.login_usu.set(login_usu);
+        this.login_usu = login_usu;
+        this.senha_usu = senha_usu;
+        this.id_ace = id_ace;
     }
 
     public String getLogin_usu() {
-        return login_usu.get();
+        return login_usu;
     }
 
-    public void setSenha_usu(String senha_usu) {
-        this.senha_usu.set(senha_usu);
+    public void setLogin_usu(String login_usu) {
+        this.login_usu = login_usu;
     }
 
     public String getSenha_usu() {
-        return senha_usu.get();
+        return senha_usu;
     }
 
-    public void setId_ace(int id_ace) {
-        this.id_ace.set(id_ace);
+    public void setSenha_usu(String senha_usu) {
+        this.senha_usu = senha_usu;
     }
 
-    public int getId_ace() {
-        return id_ace.get();
+    public Integer getId_ace() {
+        return id_ace;
+    }
+
+    public void setId_ace(Integer id_ace) {
+        this.id_ace = id_ace;
     }
 }

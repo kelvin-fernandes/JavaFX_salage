@@ -17,7 +17,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -50,7 +49,7 @@ public class LoginController implements Initializable {
     }    
     
     @FXML
-    private void closeLogin(MouseEvent event){
+    private void closeLogin(){
         Platform.exit();
     }
 
@@ -68,6 +67,7 @@ public class LoginController implements Initializable {
                     stage.setScene(new Scene(root));
                     stage.setResizable(false);
                     stage.centerOnScreen();
+                    stage.setTitle("SALAGE - Dashboard");
                     stage.show();
                 }
                 catch (Exception e) {

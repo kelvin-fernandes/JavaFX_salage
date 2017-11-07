@@ -1,6 +1,5 @@
 package javafx_salage.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,79 +28,83 @@ public class PainelDeControleController implements Initializable{
     }
 
     @FXML
-    void btnDisciplinasAction(ActionEvent event) {
-//        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCDisciplinas.fxml"));
-//            Parent root = fxmlLoader.load();
-//            Stage stage = new Stage();
-//            stage.initOwner(Main.primaryStage.getOwner());
-//            stage.initModality(Modality.APPLICATION_MODAL);
-//            stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
-//            stage.setScene(new Scene(root));
-//            stage.setResizable(false);
-//            stage.centerOnScreen();
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+    void btnDisciplinasAction() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCDisciplinas.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initOwner(Main.primaryStage.getOwner());
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.setTitle("SALAGE - Disciplinas");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void btnHorasAction(ActionEvent event) {
-//        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCHoras.fxml"));
-//            Parent root = fxmlLoader.load();
-//            Stage stage = new Stage();
-//            stage.initOwner(Main.primaryStage.getOwner());
-//            stage.initModality(Modality.APPLICATION_MODAL);
-//            stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
-//            stage.setScene(new Scene(root));
-//            stage.setResizable(false);
-//            stage.centerOnScreen();
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+    void btnHorasAction() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCHoras.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initOwner(Main.primaryStage.getOwner());
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.setTitle("SALAGE - Horas");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void btnProfessoresAction(ActionEvent event) {
-//       try {
-//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCProfessores.fxml"));
-//        Parent root = fxmlLoader.load();
-//        Stage stage = new Stage();
-//        stage.initOwner(Main.primaryStage.getOwner());
-//        stage.initModality(Modality.APPLICATION_MODAL);
-//        stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
-//        stage.setScene(new Scene(root));
-//        stage.setResizable(false);
-//        stage.centerOnScreen();
-//        stage.show();
-//    } catch (IOException e) {
-//        e.printStackTrace();
-//    }
+    void btnProfessoresAction() {
+       try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCProfessores.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initOwner(Main.primaryStage.getOwner());
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("SALAGE - Professores");
+        stage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
     }
 
     @FXML
-    void btnSalasAction(ActionEvent event) {
-//        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCSalas.fxml"));
-//            Parent root = fxmlLoader.load();
-//            Stage stage = new Stage();
-//            stage.initOwner(Main.primaryStage.getOwner());
-//            stage.initModality(Modality.APPLICATION_MODAL);
-//            stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
-//            stage.setScene(new Scene(root));
-//            stage.setResizable(false);
-//            stage.centerOnScreen();
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+    void btnSalasAction() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCSalas.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initOwner(Main.primaryStage.getOwner());
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.setTitle("SALAGE - Salas");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void btnUsuariosAction(ActionEvent event) {
+    void btnUsuariosAction() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/PDCUsuarios.fxml"));
             Parent root = fxmlLoader.load();
@@ -112,6 +115,7 @@ public class PainelDeControleController implements Initializable{
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.centerOnScreen();
+            stage.setTitle("SALAGE - Usuários");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

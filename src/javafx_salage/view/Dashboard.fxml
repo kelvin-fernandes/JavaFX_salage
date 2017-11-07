@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="paneDashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../resources/custom.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.DashboardController">
+<AnchorPane fx:id="paneDashboard" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../resources/custom.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.DashboardController">
       <VBox fx:id="sidePane" layoutX="-6.0" layoutY="57.0" prefHeight="654.0" prefWidth="110.0" style="-fx-background-color: #383e47;">
             <JFXButton fx:id="btnTelaPrincipal" buttonType="RAISED" ellipsisString="" onAction="#btnTelaPrincipalAction" prefHeight="56.0" prefWidth="104.0" ripplerFill="#ff9651" styleClass="nav-button" text="Tela Principal" textFill="WHITE" wrapText="true">
                <graphic>
