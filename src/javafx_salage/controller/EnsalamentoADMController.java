@@ -298,9 +298,8 @@ public class EnsalamentoADMController implements Initializable{
                         e.setHoras(h);
                     }
                     tableEnsalamento.setItems(ensalamentosNovos);
+                }
             }
-        }
-
         } catch (SQLException sql) {
             sql.printStackTrace();
         }

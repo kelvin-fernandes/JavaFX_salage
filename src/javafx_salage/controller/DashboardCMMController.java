@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -15,6 +17,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -71,12 +74,19 @@ public class DashboardCMMController implements Initializable{
     @FXML
     public void btnSairAction(ActionEvent event){
         try {
-            ((Node)event.getSource()).getScene().getWindow().hide();
-            Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
-            Stage stage = new Stage();
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setScene(new Scene(root));
-            stage.show();
+            Alert alertDel = new Alert(Alert.AlertType.CONFIRMATION);
+            alertDel.setTitle("Sair do Sistema");
+            alertDel.setHeaderText(null);
+            alertDel.setContentText("Deseja mesmo sair do sistema?");
+            Optional<ButtonType> btnAct = alertDel.showAndWait();
+            if(btnAct.get() == ButtonType.OK){
+                ((Node)event.getSource()).getScene().getWindow().hide();
+                Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setScene(new Scene(root));
+                stage.show();
+            }
         }
         catch (Exception e) {
             e.printStackTrace();

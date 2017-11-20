@@ -109,14 +109,6 @@ public class EnsalamentoVM {
         this.dias = dias;
     }
 
-    public DateTimeFormatter getDateTimeFormatter() {
-        return dateTimeFormatter;
-    }
-
-    public void setDateTimeFormatter(DateTimeFormatter dateTimeFormatter) {
-        this.dateTimeFormatter = dateTimeFormatter;
-    }
-
     public Integer getNumero_sala() {
         return numero_sala;
     }
@@ -124,7 +116,6 @@ public class EnsalamentoVM {
     public void setNumero_sala(Integer numero_sala) {
         this.numero_sala = numero_sala;
     }
-
 
     public String getDescricao_sala() {
         return descricao_sala;

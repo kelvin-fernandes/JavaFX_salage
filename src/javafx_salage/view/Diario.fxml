@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.DiarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.DiarioController">
    <children>
-      <TableView fx:id="tableEnsalamento" layoutX="13.0" layoutY="10.0" prefHeight="684.0" prefWidth="1078.0">
+      <TableView fx:id="tableEnsalamento" layoutX="13.0" layoutY="43.0" prefHeight="651.0" prefWidth="1078.0">
         <columns>
-          <TableColumn fx:id="colSala" maxWidth="80.0" minWidth="60.0" prefWidth="60.0" text="Sala" />
-          <TableColumn fx:id="colDataInicio" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" text="Data Início" />
-            <TableColumn fx:id="colDataFinal" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" text="Data Final" />
-            <TableColumn fx:id="colPeriodicidade" editable="false" maxWidth="260.0" minWidth="150.0" prefWidth="225.0" sortable="false" text="Periodicidade" />
-            <TableColumn fx:id="colDisciplina" maxWidth="400.0" minWidth="200.0" prefWidth="300.0" text="Disciplina" />
-            <TableColumn fx:id="colProfessor" maxWidth="400.0" minWidth="200.0" prefWidth="250.0" text="Professor" />
+          <TableColumn fx:id="colSala" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Sala" />
+          <TableColumn fx:id="colDataInicio" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" resizable="false" text="Data Início" />
+            <TableColumn fx:id="colPeriodicidade" editable="false" maxWidth="260.0" minWidth="150.0" prefWidth="250.0" resizable="false" sortable="false" text="Periodicidade" />
+            <TableColumn fx:id="colDisciplina" maxWidth="400.0" minWidth="200.0" prefWidth="325.0" resizable="false" text="Disciplina" />
+            <TableColumn fx:id="colProfessor" maxWidth="400.0" minWidth="200.0" prefWidth="280.0" resizable="false" text="Professor" />
         </columns>
       </TableView>
+      <JFXButton contentDisplay="CENTER" layoutX="1065.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnReloadAction" prefHeight="25.0" prefWidth="25.0" text=" " textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/reload.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>
