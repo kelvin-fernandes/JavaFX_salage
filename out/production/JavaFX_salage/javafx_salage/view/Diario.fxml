@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.DiarioController">
+   <children>
+      <TableView fx:id="tableEnsalamento" layoutX="13.0" layoutY="10.0" prefHeight="684.0" prefWidth="1078.0">
+        <columns>
+          <TableColumn fx:id="colSala" maxWidth="80.0" minWidth="60.0" prefWidth="60.0" text="Sala" />
+          <TableColumn fx:id="colDataInicio" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" text="Data Início" />
+            <TableColumn fx:id="colDataFinal" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" text="Data Final" />
+            <TableColumn fx:id="colPeriodicidade" editable="false" maxWidth="260.0" minWidth="150.0" prefWidth="225.0" sortable="false" text="Periodicidade" />
+            <TableColumn fx:id="colDisciplina" maxWidth="400.0" minWidth="200.0" prefWidth="300.0" text="Disciplina" />
+            <TableColumn fx:id="colProfessor" maxWidth="400.0" minWidth="200.0" prefWidth="250.0" text="Professor" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

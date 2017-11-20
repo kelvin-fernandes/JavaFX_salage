@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.EnsalamentoADMController">
+   <children>
+      <TableView fx:id="tableEnsalamento" layoutX="13.0" layoutY="59.0" prefHeight="635.0" prefWidth="1078.0">
+        <columns>
+          <TableColumn fx:id="colSala" maxWidth="80.0" minWidth="60.0" prefWidth="60.0" text="Sala" />
+          <TableColumn fx:id="colDataInicio" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" text="Data Início" />
+            <TableColumn fx:id="colDataFinal" maxWidth="200.0" minWidth="100.0" prefWidth="120.0" text="Data Final" />
+            <TableColumn fx:id="colPeriodicidade" editable="false" maxWidth="260.0" minWidth="150.0" prefWidth="210.0" sortable="false" text="Periodicidade" />
+            <TableColumn fx:id="colDisciplina" maxWidth="400.0" minWidth="200.0" prefWidth="250.0" text="Disciplina" />
+            <TableColumn fx:id="colProfessor" maxWidth="400.0" minWidth="200.0" prefWidth="200.0" text="Professor" />
+            <TableColumn fx:id="colEditar" editable="false" maxWidth="53.0" minWidth="53.0" prefWidth="53.0" resizable="false" sortable="false" />
+            <TableColumn fx:id="colDeletar" maxWidth="62.0" minWidth="62.0" prefWidth="62.0" resizable="false" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cbSala" editable="true" layoutX="13.0" layoutY="17.0" onAction="#filtrosAction" prefHeight="25.0" prefWidth="61.0" promptText="Sala" />
+      <JFXDatePicker fx:id="dtInicio" defaultColor="#1c7c4a" editable="false" layoutX="79.0" layoutY="22.0" onAction="#filtrosAction" prefHeight="28.0" prefWidth="123.0" promptText="Data" />
+      <JFXComboBox fx:id="cbProfessor" editable="true" layoutX="208.0" layoutY="17.0" onAction="#filtrosAction" prefHeight="25.0" prefWidth="192.0" promptText="Professor" />
+      <JFXButton fx:id="btnAdicionar" contentDisplay="CENTER" layoutX="1063.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnAdicionarAction" prefHeight="28.0" prefWidth="27.0" text=" " textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnLimparFiltros" contentDisplay="CENTER" layoutX="410.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#cleanFields" prefHeight="25.0" prefWidth="21.0" text=" " textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/limparfiltros.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

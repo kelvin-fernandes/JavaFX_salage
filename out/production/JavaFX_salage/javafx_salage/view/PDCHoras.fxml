@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.PDCHorasController">
+   <children>
+      <TableView fx:id="tableHoras" editable="true" layoutX="14.0" layoutY="16.0" prefHeight="368.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colHora" maxWidth="199.0" prefWidth="199.0" text="Hora" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="224.0" layoutY="16.0" prefHeight="178.0" prefWidth="312.0" style="-fx-background-color: #e5e5e5;">
+         <children>
+            <JFXDatePicker fx:id="dpHora" defaultColor="BLACK" layoutX="31.0" layoutY="42.0" prefHeight="28.0" prefWidth="253.0" />
+            <Label fx:id="lblStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="140.0" prefHeight="29.0" prefWidth="266.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnEditar" buttonType="RAISED" ellipsisString="" layoutX="161.0" layoutY="102.0" onAction="#btnEditarAction" prefHeight="29.0" prefWidth="119.0" style="-fx-background-color: black;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCancelar" buttonType="RAISED" ellipsisString="" layoutX="37.0" layoutY="102.0" onAction="#btnCancelarAction" prefHeight="29.0" prefWidth="119.0" style="-fx-background-color: black;" text="Cancelar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAdicionar" buttonType="RAISED" ellipsisString="" layoutX="31.0" layoutY="102.0" onAction="#btnAdicionarAction" prefHeight="29.0" prefWidth="253.0" style="-fx-background-color: black;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnDeletar" buttonType="RAISED" ellipsisString="" layoutX="230.0" layoutY="355.0" onAction="#btnDeletarAction" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: black;" text="Deletar" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

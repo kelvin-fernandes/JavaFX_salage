@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="painelDeControle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="1104.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_salage.controller.PainelDeControleController">
+   <children>
+      <JFXButton fx:id="btnUsuarios" layoutX="296.0" layoutY="188.0" onAction="#btnUsuariosAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #ff2b2b;" text=" ">
+         <graphic>
+            <ImageView fitHeight="93.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/usuarios.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip anchorX="0.0" anchorY="0.0" contentDisplay="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Usuários" textAlignment="CENTER" x="0.0" y="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+            </Tooltip>
+         </tooltip></JFXButton>
+      <JFXButton fx:id="btnSalas" layoutX="481.0" layoutY="190.0" onAction="#btnSalasAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #5cff2b;" text=" ">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/salas.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" hideOnEscape="false" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Salas" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Tooltip>
+         </tooltip></JFXButton>
+      <JFXButton fx:id="btnProfessores" layoutX="663.0" layoutY="188.0" onAction="#btnProfessoresAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #21e0ca;" text=" ">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/prof.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Professores" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Tooltip>
+         </tooltip></JFXButton>
+      <JFXButton fx:id="btnDisciplinas" layoutX="389.0" layoutY="372.0" onAction="#btnDisciplinasAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #ca59ff;" text=" ">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/disciplinas.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Disciplinas" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Tooltip>
+         </tooltip></JFXButton>
+      <JFXButton fx:id="btnHoras" layoutX="574.0" layoutY="374.0" onAction="#btnHorasAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #ff9900;" text=" ">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/horas.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Horário" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Tooltip>
+         </tooltip></JFXButton>
+   </children>
+</AnchorPane>
