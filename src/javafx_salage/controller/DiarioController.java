@@ -83,6 +83,8 @@ public class DiarioController implements Initializable{
                                 }
                                 ensalamentosNovos.add(ensalamentoInicial);
                             }
+                            else
+                                ensalamentosNovos.add(ensalamentos.get(i + 1));
                         }
                         else if (!proximoDiferente) {
                             contadorEnsalamento++;

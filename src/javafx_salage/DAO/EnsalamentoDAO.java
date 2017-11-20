@@ -53,7 +53,8 @@ public class EnsalamentoDAO {
                             " JOIN sala s ON e.numero_sala = s.numero_sala" +
                             " JOIN disciplina d ON e.id_disc = d.id_disc" +
                             " JOIN professor p ON e.rgf_prof = p.rgf_prof" +
-                            " WHERE e.data_inicio = ?";
+                            " WHERE e.data_inicio = ?" +
+                            " ORDER BY id_ensal ASC";
 
         try {
             preparedStatement = connection.prepareStatement(query);
