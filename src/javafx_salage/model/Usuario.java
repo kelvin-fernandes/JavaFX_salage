@@ -6,9 +6,9 @@ public class Usuario {
     private Integer id_ace;
 
     public Usuario(String login_usu, String senha_usu, Integer id_ace) {
-        this.login_usu = login_usu;
-        this.senha_usu = senha_usu;
-        this.id_ace = id_ace;
+        setLogin_usu(login_usu);
+        setSenha_usu(senha_usu);
+        setId_ace(id_ace);
     }
 
     public String getLogin_usu() {

@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adição de view, model, controller e DAO de todos os elementos CRUD da aplicação">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/DisciplinasDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/ProfessorDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/SalasDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PDCDisciplinasController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PDCHorasController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PDCProfessoresController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PDCSalasController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/TelaPrincipalController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Acesso.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Hora.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/HoraEnsalamento.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Professor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Sala.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/PDCDisciplinas.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/PDCHoras.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/PDCProfessores.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/PDCSalas.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFX_salage/javafx_salage/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/production/JavaFX_salage/javafx_salage/controller/LoginController.class" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adição das Models, Views e Controllers de ambos usuários (ADM e Usuário comum); Adição do filtro em Ensalamento; Remoção de códigos comentados; Modificação do algoritmo de inserção de Ensalamento.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/images/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/images/diario.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/images/limparfiltros.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/DiarioController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoAdicionarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoEditarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/EnsalmentoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/DashboardADM.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/Diario.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/Ensalamento.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoAdicionar.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoEditar.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/javafx_salage/controller/TelaPrincipalController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/javafx_salage/model/HoraEnsalamento.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/javafx_salage/images/home.png" afterPath="$PROJECT_DIR$/src/javafx_salage/images/ensalamento.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salage.sqlite" afterPath="$PROJECT_DIR$/salage.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/flexcalendar_DirkLemmermann.xml" afterPath="$PROJECT_DIR$/.idea/libraries/flexcalendar_DirkLemmermann.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/images/Shutdown.png" afterPath="$PROJECT_DIR$/src/javafx_salage/images/Shutdown.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/images/configuracoes.png" afterPath="$PROJECT_DIR$/src/javafx_salage/images/configuracoes.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaFX_salage/javafx_salage/view/Login.fxml" afterPath="$PROJECT_DIR$/out/production/JavaFX_salage/javafx_salage/view/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/DAO/UsuarioDAO.java" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/UsuarioDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java" afterPath="$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/controller/DashboardController.java" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/DashboardController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/controller/PDCUsuariosController.java" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PDCUsuariosController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/controller/PainelDeControleController.java" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PainelDeControleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/controller/PDCHorasController.java" afterPath="$PROJECT_DIR$/src/javafx_salage/controller/PDCHorasController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Acesso.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Acesso.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Hora.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Hora.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Professor.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Professor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Sala.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Sala.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/model/Usuario.java" afterPath="$PROJECT_DIR$/src/javafx_salage/model/Usuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml" afterPath="$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/view/PDCUsuarios.fxml" afterPath="$PROJECT_DIR$/src/javafx_salage/view/PDCUsuarios.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java" afterPath="$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,144 +107,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PDCHorasController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PDCHorasController.java">
+      <file leaf-file-name="EnsalamentoDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TelaPrincipalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/TelaPrincipalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TelaPrincipalDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="148">
+              <caret line="234" column="47" lean-forward="false" selection-start-line="234" selection-start-column="47" selection-end-line="234" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1510096306903" expanded="true" signature="960:1290" ph="SELECT * FRO... ensalamento" />
-                <marker date="1510096306903" expanded="true" signature="3024:3048" ph="Select * fro... disciplina" />
+                <marker date="1511146315615" expanded="true" signature="809:983" ph="SELECT * FRO... ensalamentoWHERE" />
+                <marker date="1511146315615" expanded="true" signature="1743:2001" ph="SELECT * FRO... ensalamento" />
+                <marker date="1511146315615" expanded="true" signature="1743:2058" ph="SELECT * FRO... ensalamento" />
+                <marker date="1511146315615" expanded="true" signature="3473:3491" ph="SELECT * FRO... sala" />
+                <marker date="1511146315615" expanded="true" signature="4353:4377" ph="SELECT * FRO... disciplina" />
+                <marker date="1511146315615" expanded="true" signature="5244:5267" ph="SELECT * FRO... professor" />
+                <marker date="1511146315615" expanded="true" signature="6056:6074" ph="SELECT * FRO... hora" />
+                <marker date="1511146315615" expanded="true" signature="7467:7504" ph="SELECT MAX(i... ensalamento" />
+                <marker date="1511146315615" expanded="true" signature="9427:9496" ph="INSERT INTO ensalamento... " />
+                <marker date="1511146315615" expanded="true" signature="15960:16233" ph="SELECT * FRO... ensalamento" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/UsuarioDAO.java">
+      <file leaf-file-name="EnsalamentoAdicionarController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoAdicionarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="794">
+              <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
               <folding>
-                <marker date="1509608862329" expanded="true" signature="600:641" ph="SELECT * FRO... usuario" />
-                <marker date="1509608862329" expanded="true" signature="1191:1227" ph="INSERT INTO usuario... " />
-                <marker date="1509608862329" expanded="true" signature="1774:1813" ph="DELETE FROM " />
-                <marker date="1509608862329" expanded="true" signature="2264:2305" ph="SELECT * FRO... usuario" />
-                <marker date="1509608862329" expanded="true" signature="3097:3149" ph="UPDATE usuar... " />
-                <marker date="1509608862329" expanded="true" signature="3177:3226" ph="UPDATE usuar... " />
-                <marker date="1509608862329" expanded="true" signature="4031:4052" ph="Select * fro... usuario" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnsalamentoVM.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dashboard.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ensalamento.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-              <folding>
-                <element signature="e#1237#1238#0" expanded="true" />
-                <element signature="e#1264#1265#0" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1375#1376#0" expanded="true" />
-                <element signature="e#1408#1409#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1579#1580#0" expanded="true" />
-                <element signature="e#1632#1633#0" expanded="true" />
-                <element signature="e#1674#1675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HoraDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-864">
-              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-              <folding>
-                <marker date="1509687600745" expanded="true" signature="620:660" ph="SELECT * FRO... hora" />
-                <marker date="1509687600745" expanded="true" signature="1211:1238" ph="INSERT INTO hora... " />
-                <marker date="1509687600745" expanded="true" signature="1704:1742" ph="DELETE FROM " />
-                <marker date="1509687600745" expanded="true" signature="2206:2246" ph="SELECT * FRO... hora" />
-                <marker date="1509687600745" expanded="true" signature="3006:3024" ph="Select * fro... hora" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalasDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/SalasDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-              <folding>
-                <marker date="1509681216796" expanded="true" signature="728:768" ph="SELECT * FRO... sala" />
-                <marker date="1509681216796" expanded="true" signature="1314:1347" ph="INSERT INTO sala... " />
-                <marker date="1509681216796" expanded="true" signature="1890:1928" ph="DELETE FROM " />
-                <marker date="1509681216796" expanded="true" signature="2373:2413" ph="SELECT * FRO... sala" />
-                <marker date="1509681216796" expanded="true" signature="3209:3265" ph="UPDATE sala " />
-                <marker date="1509681216796" expanded="true" signature="3293:3350" ph="UPDATE sala " />
-                <marker date="1509681216796" expanded="true" signature="4138:4156" ph="Select * fro... sala" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDCSalasController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PDCSalasController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-296">
-              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -263,23 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>id_ace</find>
-      <find>nome_disc</find>
-      <find>Usuario</find>
-      <find>colLogin</find>
-      <find>txtSenha</find>
-      <find>userEditing</find>
-      <find>getLogin_usu</find>
-      <find>user</find>
-      <find>getId_ace</find>
-      <find>Usuário</find>
-      <find>Preencha os campos login e senha</find>
-      <find>tableDisciplinas</find>
-      <find>txtNome</find>
-      <find>professores</find>
-      <find>profEditing</find>
-      <find>tpHora</find>
-      <find>rgf_prof</find>
       <find>rgf</find>
       <find>String</find>
       <find>prof</find>
@@ -293,20 +167,25 @@
       <find>num1</find>
       <find>num2</find>
       <find>Usuarios</find>
+      <find>comboCaricaNome</find>
+      <find>bln</find>
+      <find>t</find>
+      <find>Impostazioni</find>
+      <find>combo</find>
+      <find>cbSala</find>
+      <find>Sala</find>
+      <find>salasData</find>
+      <find>s</find>
+      <find>stati</find>
+      <find>static</find>
+      <find>LocalDate</find>
+      <find>tableEnsalamento</find>
+      <find>Person</find>
+      <find>colAcoes</find>
+      <find>setMb</find>
+      <find>cbProfessor</find>
     </findStrings>
     <replaceStrings>
-      <replace>T</replace>
-      <replace>isUsuario</replace>
-      <replace>SalasDAO</replace>
-      <replace>newSala</replace>
-      <replace>sala</replace>
-      <replace>tableProfessores</replace>
-      <replace>Sala</replace>
-      <replace>getNome_prof</replace>
-      <replace>rgf</replace>
-      <replace>prof</replace>
-      <replace>Professor</replace>
-      <replace>nome_prof</replace>
       <replace>disc</replace>
       <replace>nome</replace>
       <replace>colQtdAlunos</replace>
@@ -325,6 +204,18 @@
       <replace>addTextFieldProperty</replace>
       <replace>qtd</replace>
       <replace>Ensalamento</replace>
+      <replace>cbSala</replace>
+      <replace>b</replace>
+      <replace>s</replace>
+      <replace>Sala</replace>
+      <replace>cbDisciplina</replace>
+      <replace>Disciplina</replace>
+      <replace>disciplinaData</replace>
+      <replace>professoresData</replace>
+      <replace>cbProfessor</replace>
+      <replace>Professor</replace>
+      <replace>p</replace>
+      <replace>d</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -350,31 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/javafx_salage/SqliteConnection.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/LoginAdapter.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/Main.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Login.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/UsuarioRepository.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/interfaces/IRepository.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/repository/Login.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/repository/UsuarioRepository.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/repository/base/Repository.java" />
-        <option value="$USER_HOME$/Desktop/Hoje/hoje/ConnectionFactory.java" />
-        <option value="$USER_HOME$/Desktop/Hoje/hoje/ContatoDAO.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/SqliteConnectionFactory.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java" />
-        <option value="$PROJECT_DIR$/external_libs/sqlite-jdbc-3.20.0.jar!/org/sqlite/jdbc3/JDBC3Connection.class" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/view/Login.fxml" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/view/PainelDeControle.fxml" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/hora_ensalamento.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/HoraEnsalamento.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Hora.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Acesso.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Professor.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Sala.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/UsuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/controller/PDCUsuariosController.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/controller/PDCSalasController.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/DAO/ProfessorDAO.java" />
@@ -382,22 +248,50 @@
         <option value="$PROJECT_DIR$/src/javafx_salage/DAO/DisciplinasDAO.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/controller/PDCDisciplinasController.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/controller/PainelDeControleController.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml" />
         <option value="$PROJECT_DIR$/src/javafx_salage/view/PDCUsuarios.fxml" />
         <option value="$PROJECT_DIR$/src/javafx_salage/view/PDCSalas.fxml" />
         <option value="$PROJECT_DIR$/src/javafx_salage/view/PDCProfessores.fxml" />
         <option value="$PROJECT_DIR$/src/javafx_salage/view/PDCDisciplinas.fxml" />
         <option value="$PROJECT_DIR$/src/javafx_salage/controller/PDCProfessoresController.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/view/PDCHoras.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/view/TelaPrincipal.fxml" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/controller/DashboardController.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/controller/TelaPrincipalController.java" />
-        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/TPAdicionar.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Acesso.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Professor.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Usuario.java" />
         <option value="$PROJECT_DIR$/src/javafx_salage/controller/PDCHorasController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/TPAdicionarController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/TelaPrincipalController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Sala.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/Ensalamento.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoAdicionar.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoAdicionarController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/model/Hora.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoEditar.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoEditarController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalmentoController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/DashboardController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/DashboardCMM.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoADM.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoCMM.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/DashboardADMController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/DiarioController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalmentoADMController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/DashboardCMMController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalmentoCMMController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/DashboardADM.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/view/Diario.fxml" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoCMMController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoADMController.java" />
+        <option value="$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java" />
       </list>
     </option>
   </component>
@@ -415,8 +309,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="25" />
-    <option name="y" value="80" />
+    <option name="x" value="-166" />
+    <option name="y" value="166" />
     <option name="width" value="1372" />
     <option name="height" value="775" />
   </component>
@@ -428,7 +322,7 @@
             <id />
           </State>
           <State>
-            <id>General</id>
+            <id>SQL</id>
           </State>
           <State>
             <id>Spelling</id>
@@ -436,7 +330,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Duplicates</id>
+            <id>SQL</id>
           </State>
         </selected-state>
       </profile-state>
@@ -463,7 +357,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -487,28 +381,14 @@
               <item name="JavaFX_salage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="javafx_salage" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaFX_salage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaFX_salage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx_salage" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaFX_salage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaFX_salage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx_salage" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -528,9 +408,10 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.23212537" />
     <property name="last.edited.regexp" value="" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="SQLite" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -538,8 +419,8 @@
       <recent name="C:\Users\Kelvin\Google Drive\IdeaProjects\JavaFX_salage\src\javafx_salage\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="javafx_salage.DAO" />
       <recent name="javafx_salage.controller" />
+      <recent name="javafx_salage.DAO" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kelvin\Google Drive\IdeaProjects\JavaFX_salage\src\javafx_salage\resources" />
@@ -682,7 +563,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Kelvin\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -709,7 +590,11 @@
       <workItem from="1509457820538" duration="65905000" />
       <workItem from="1509692687810" duration="112000" />
       <workItem from="1509693304897" duration="1181000" />
-      <workItem from="1509858524396" duration="18705000" />
+      <workItem from="1509858524396" duration="36297000" />
+      <workItem from="1510172912114" duration="1033000" />
+      <workItem from="1510174279511" duration="66683000" />
+      <workItem from="1510738634201" duration="3365000" />
+      <workItem from="1510789778175" duration="41046000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1507487641649</created>
@@ -746,33 +631,39 @@
       <option name="project" value="LOCAL" />
       <updated>1509548305738</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adição de view, model, controller e DAO de todos os elementos CRUD da aplicação">
+      <created>1510096431017</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1510096431018</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159196000" />
+    <option name="totallyTimeSpent" value="288915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.64083457" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4575261" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70996976" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609538" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20937042" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22913617" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40685543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -805,19 +696,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4023845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32637855" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.366617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70996976" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26825634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20937042" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20937042" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -865,11 +756,52 @@
     <MESSAGE value="Reestruturação do MVC junto ao DAO, adição inicial de Usuario (model, dao, PDCcontroller) e da controller de Painel de Controle" />
     <MESSAGE value="Finalização de PDCUsuario totalmente funcional (UsuarioDAO, PDCUsuarioController)" />
     <MESSAGE value="Adição de view, model, controller e DAO de todos os elementos CRUD da aplicação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adição de view, model, controller e DAO de todos os elementos CRUD da aplicação" />
+    <MESSAGE value="Adição das Models, Views e Controllers de ambos usuários (ADM e Usuário comum); Adição do filtro em Ensalamento; Remoção de códigos comentados; Modificação do algoritmo de inserção de Ensalamento." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adição das Models, Views e Controllers de ambos usuários (ADM e Usuário comum); Adição do filtro em Ensalamento; Remoção de códigos comentados; Modificação do algoritmo de inserção de Ensalamento." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoEditarController.java</url>
+          <line>194</line>
+          <properties class="javafx_salage.controller.EnsalamentoEditarController" method="btnEditarAction">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java</url>
+          <line>25</line>
+          <properties class="javafx_salage.DAO.EnsalamentoDAO" method="existeEnsalamento">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java</url>
+          <line>218</line>
+          <properties class="javafx_salage.DAO.EnsalamentoDAO" method="realizarEnsalamentos">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java</url>
+          <line>237</line>
+          <properties class="javafx_salage.DAO.EnsalamentoDAO" method="adicionarEnsalamento">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoAdicionarController.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="70" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -878,144 +810,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/JavaFX_salage.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/student-fx-master/student-fx-master/src/studentfx/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/util/Callback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/interfaces/IRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/repository/base/Repository.java" />
-    <entry file="file://$USER_HOME$/Desktop/Hoje/hoje/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Hoje/hoje/ContatoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/external_libs/sqlite-jdbc-3.20.0.jar!/org/sqlite/jdbc3/JDBC3Connection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1798">
-          <caret line="105" column="24" lean-forward="false" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/collections/ListChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="303" column="16" lean-forward="false" selection-start-line="303" selection-start-column="16" selection-end-line="303" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Hoje/hoje/TesteInsere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Acesso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/HoraEnsalamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Professor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Sala.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/ProfessorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/DisciplinasDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1404">
           <caret line="92" column="55" lean-forward="false" selection-start-line="92" selection-start-column="55" selection-end-line="92" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Hora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1026,132 +824,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PainelDeControleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PainelDeControle.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="233" lean-forward="false" selection-start-line="9" selection-start-column="233" selection-end-line="9" selection-end-column="233" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCUsuarios.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCUsuarios.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="168" lean-forward="false" selection-start-line="11" selection-start-column="168" selection-end-line="11" selection-end-column="168" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCSalas.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="168" lean-forward="false" selection-start-line="10" selection-start-column="168" selection-end-line="10" selection-end-column="168" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCDisciplinas.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="168" lean-forward="false" selection-start-line="10" selection-start-column="168" selection-end-line="10" selection-end-column="168" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/Login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="155" lean-forward="false" selection-start-line="12" selection-start-column="155" selection-end-line="12" selection-end-column="155" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCProfessores.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PDCProfessoresController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/SqliteConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCHoras.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="168" lean-forward="false" selection-start-line="10" selection-start-column="168" selection-end-line="10" selection-end-column="168" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/TelaPrincipal.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PDCUsuariosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="71" column="9" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="71" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,116 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-296">
           <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/SalasDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding>
-            <marker date="1509681216796" expanded="true" signature="728:768" ph="SELECT * FRO... sala" />
-            <marker date="1509681216796" expanded="true" signature="1314:1347" ph="INSERT INTO sala... " />
-            <marker date="1509681216796" expanded="true" signature="1890:1928" ph="DELETE FROM " />
-            <marker date="1509681216796" expanded="true" signature="2373:2413" ph="SELECT * FRO... sala" />
-            <marker date="1509681216796" expanded="true" signature="3209:3265" ph="UPDATE sala " />
-            <marker date="1509681216796" expanded="true" signature="3293:3350" ph="UPDATE sala " />
-            <marker date="1509681216796" expanded="true" signature="4138:4156" ph="Select * fro... sala" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <marker date="1509687600745" expanded="true" signature="620:660" ph="SELECT * FRO... hora" />
-            <marker date="1509687600745" expanded="true" signature="1211:1238" ph="INSERT INTO hora... " />
-            <marker date="1509687600745" expanded="true" signature="1704:1742" ph="DELETE FROM " />
-            <marker date="1509687600745" expanded="true" signature="2206:2246" ph="SELECT * FRO... hora" />
-            <marker date="1509687600745" expanded="true" signature="3006:3024" ph="Select * fro... hora" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding>
-            <element signature="e#1237#1238#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1375#1376#0" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1674#1675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding>
-            <element signature="docComment;class#DashboardController#0" expanded="false" />
-            <element signature="docComment;field#paneConteudo#0;class#DashboardController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/TelaPrincipalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/Dashboard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/TelaPrincipalDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1510096306903" expanded="true" signature="960:1290" ph="SELECT * FRO... ensalamento" />
-            <marker date="1510096306903" expanded="true" signature="3024:3048" ph="Select * fro... disciplina" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,23 +872,396 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding>
-            <marker date="1509608862329" expanded="true" signature="600:641" ph="SELECT * FRO... usuario" />
-            <marker date="1509608862329" expanded="true" signature="1191:1227" ph="INSERT INTO usuario... " />
-            <marker date="1509608862329" expanded="true" signature="1774:1813" ph="DELETE FROM " />
-            <marker date="1509608862329" expanded="true" signature="2264:2305" ph="SELECT * FRO... usuario" />
-            <marker date="1509608862329" expanded="true" signature="3097:3149" ph="UPDATE usuar... " />
-            <marker date="1509608862329" expanded="true" signature="3177:3226" ph="UPDATE usuar... " />
-            <marker date="1509608862329" expanded="true" signature="4031:4052" ph="Select * fro... usuario" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/HoraDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="110" column="58" lean-forward="false" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/SqliteConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8413" column="0" lean-forward="false" selection-start-line="8413" selection-start-column="0" selection-end-line="8413" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="2501" column="0" lean-forward="false" selection-start-line="2501" selection-start-column="0" selection-end-line="2501" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/beans/value/ChangeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCHoras.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="168" lean-forward="false" selection-start-line="10" selection-start-column="168" selection-end-line="10" selection-end-column="168" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Acesso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/HoraEnsalamento.java" />
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Professor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PDCHorasController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+        <state relative-caret-position="-331">
+          <caret line="115" column="68" lean-forward="false" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Ensalamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="24" column="73" lean-forward="false" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PDCUsuariosController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/PainelDeControleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Sala.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="e#245#246#0" expanded="false" />
+            <element signature="e#288#289#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PDCDisciplinas.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="168" lean-forward="false" selection-start-line="10" selection-start-column="168" selection-end-line="10" selection-end-column="168" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/PainelDeControle.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="233" lean-forward="false" selection-start-line="9" selection-start-column="233" selection-end-line="9" selection-end-column="233" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Disciplina.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/model/Hora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <element signature="e#147#148#0" expanded="false" />
+            <element signature="e#190#191#0" expanded="false" />
+            <element signature="e#393#394#0" expanded="false" />
+            <element signature="e#432#433#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/SalasDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-803">
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoEditarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="252" column="40" lean-forward="false" selection-start-line="252" selection-start-column="40" selection-end-line="252" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/LoginDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-682">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#LoginDAO#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/DiarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="59" column="79" lean-forward="true" selection-start-line="59" selection-start-column="79" selection-end-line="59" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/DashboardADM.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="12" column="187" lean-forward="false" selection-start-line="12" selection-start-column="187" selection-end-line="12" selection-end-column="187" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/Diario.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="169" lean-forward="false" selection-start-line="6" selection-start-column="169" selection-end-line="6" selection-end-column="169" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoAdicionar.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="168" lean-forward="false" selection-start-line="12" selection-start-column="168" selection-end-line="12" selection-end-column="168" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoADM.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="169" lean-forward="false" selection-start-line="11" selection-start-column="169" selection-end-line="11" selection-end-column="169" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoCMM.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="169" lean-forward="false" selection-start-line="11" selection-start-column="169" selection-end-line="11" selection-end-column="169" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/EnsalamentoEditar.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="168" lean-forward="false" selection-start-line="12" selection-start-column="168" selection-end-line="12" selection-end-column="168" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/view/DashboardCMM.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="187" lean-forward="false" selection-start-line="12" selection-start-column="187" selection-end-line="12" selection-end-column="187" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/DashboardADMController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/viewmodel/EnsalamentoVM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/DashboardCMMController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#DashboardCMMController#0" expanded="false" />
+            <element signature="docComment;field#paneConteudo#0;class#DashboardCMMController#0" expanded="false" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoCMMController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="93" column="53" lean-forward="false" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoADMController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="381" column="0" lean-forward="false" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="1770" column="0" lean-forward="false" selection-start-line="1770" selection-start-column="0" selection-end-line="1770" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/controller/EnsalamentoAdicionarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javafx_salage/DAO/EnsalamentoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="234" column="47" lean-forward="false" selection-start-line="234" selection-start-column="47" selection-end-line="234" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1511146315615" expanded="true" signature="809:983" ph="SELECT * FRO... ensalamentoWHERE" />
+            <marker date="1511146315615" expanded="true" signature="1743:2001" ph="SELECT * FRO... ensalamento" />
+            <marker date="1511146315615" expanded="true" signature="1743:2058" ph="SELECT * FRO... ensalamento" />
+            <marker date="1511146315615" expanded="true" signature="3473:3491" ph="SELECT * FRO... sala" />
+            <marker date="1511146315615" expanded="true" signature="4353:4377" ph="SELECT * FRO... disciplina" />
+            <marker date="1511146315615" expanded="true" signature="5244:5267" ph="SELECT * FRO... professor" />
+            <marker date="1511146315615" expanded="true" signature="6056:6074" ph="SELECT * FRO... hora" />
+            <marker date="1511146315615" expanded="true" signature="7467:7504" ph="SELECT MAX(i... ensalamento" />
+            <marker date="1511146315615" expanded="true" signature="9427:9496" ph="INSERT INTO ensalamento... " />
+            <marker date="1511146315615" expanded="true" signature="15960:16233" ph="SELECT * FRO... ensalamento" />
+          </folding>
         </state>
       </provider>
     </entry>

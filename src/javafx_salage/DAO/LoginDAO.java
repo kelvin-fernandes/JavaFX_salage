@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javafx_salage.SqliteConnectionFactory;
+import javafx_salage.model.Usuario;
 
 /**
  *
@@ -52,7 +53,29 @@ public class LoginDAO {
         finally {
             preparedStatement.close();
             resultSet.close();
-            connection.close();
+        }
+    }
+
+    public Usuario getUsuario(String user) throws SQLException{
+        String query = "SELECT * FROM usuario WHERE login_usu = ?";
+
+        try{
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, user);
+
+            resultSet = preparedStatement.executeQuery();
+
+            return new Usuario( resultSet.getString("login_usu"),
+                                resultSet.getString("senha_usu"),
+                                resultSet.getInt("id_ace"));
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        finally {
+            preparedStatement.close();
+            resultSet.close();
         }
     }
 }

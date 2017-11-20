@@ -5,8 +5,8 @@ public class Professor {
     private String nome_prof;
 
     public Professor(String rgf_prof, String nome_prof) {
-        this.rgf_prof = rgf_prof;
-        this.nome_prof = nome_prof;
+        setRgf_prof(rgf_prof);
+        setNome_prof(nome_prof);
     }
 
     public String getRgf_prof() {
@@ -23,5 +23,10 @@ public class Professor {
 
     public void setNome_prof(String nome_prof) {
         this.nome_prof = nome_prof;
+    }
+
+    @Override
+    public String toString(){
+        return getNome_prof();
     }
 }

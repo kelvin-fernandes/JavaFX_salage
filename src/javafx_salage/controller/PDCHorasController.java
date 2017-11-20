@@ -101,23 +101,23 @@ public class PDCHorasController implements Initializable {
 
     private void setEditForm(Hora hora){
         horaEditing = hora;
-        dpHora.setTime(hora.getHora_inicio());
+        dpHora.setTime(LocalTime.parse(hora.getHora_inicio()));
         activeBtnEditar();
     }
 
-    private boolean verifyInterval(LocalTime time){
-        return time.isAfter(LocalTime.of(6, 59)) && time.isBefore(LocalTime.of(23, 1));
+    public static boolean verifyInterval(LocalTime time){
+        return time.isAfter(LocalTime.of(6, 59)) && time.isBefore(LocalTime.of(23, 1)) && time.getMinute() == 0;
     }
 
     @FXML
     void btnAdicionarAction() {
         try {
             if(!verifyInterval(dpHora.getTime()))
-                lblStatus.setText("Permitido: Hora >= 7 e Hora <= 23");
-            else if(horaDAO.isHora(dpHora.getTime()))
+                lblStatus.setText("Permitido: Hora >= 7 e Hora <= 22 e Minutos == 0");
+            else if(horaDAO.isHora(dpHora.getTime().toString()))
                 lblStatus.setText("Hora já existente!");
             else{
-                horaDAO.add(dpHora.getTime());
+                horaDAO.add(dpHora.getTime().toString());
                 limparCamposAdicionar();
                 initializeHoraTable();
             }
@@ -142,7 +142,7 @@ public class PDCHorasController implements Initializable {
     @FXML
     void btnEditarAction() {
         try {
-            Hora horaBD = horaDAO.find(dpHora.getTime());
+            Hora horaBD = horaDAO.find(dpHora.getTime().toString());
 
             if(dpHora.getTime().getHour() == 0)
                 lblStatus.setText("Escolha um Horário!");
@@ -150,7 +150,7 @@ public class PDCHorasController implements Initializable {
                 lblStatus.setText("Hora já existente!");
             else {
                 horaDAO.delete(horaEditing.getHora_inicio());
-                horaDAO.add(dpHora.getTime());
+                horaDAO.add(dpHora.getTime().toString());
                 limparCamposAdicionar();
                 activeBtnAdicionar();
                 initializeHoraTable();

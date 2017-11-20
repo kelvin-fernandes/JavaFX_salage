@@ -5,8 +5,8 @@ public class Acesso {
     private String descricao_ace;
 
     public Acesso(Integer id_ace, String descricao_ace){
-        this.id_ace = id_ace;
-        this.descricao_ace = descricao_ace;
+        setId_ace(id_ace);
+        setDescricao_ace(descricao_ace);
     }
 
     public Integer getId_ace() {

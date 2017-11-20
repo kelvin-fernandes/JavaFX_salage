@@ -19,12 +19,12 @@ public class HoraDAO {
             System.exit(1);
     }
 
-    public boolean isHora(LocalTime hora) throws SQLException{
+    public boolean isHora(String hora) throws SQLException{
         String query = "SELECT * FROM hora WHERE hora_inicio = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setTime(1, Time.valueOf(hora));
+            preparedStatement.setString(1, hora);
             
             resultSet = preparedStatement.executeQuery();
 
@@ -40,12 +40,12 @@ public class HoraDAO {
         }
     }
 
-    public void add(LocalTime hora) throws SQLException{
+    public void add(String hora) throws SQLException{
         String query = "INSERT INTO hora VALUES (?)";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setTime(1, Time.valueOf(hora));
+            preparedStatement.setString(1, hora);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -57,12 +57,12 @@ public class HoraDAO {
         }
     }
 
-    public void delete(LocalTime hora) throws SQLException{
+    public void delete(String hora) throws SQLException{
         String query = "DELETE FROM hora WHERE hora_inicio = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setTime(1, Time.valueOf(hora));
+            preparedStatement.setString(1, hora);
             preparedStatement.executeUpdate();
         }
         catch (Exception e){
@@ -74,18 +74,18 @@ public class HoraDAO {
         }
     }
 
-    public Hora find(LocalTime hora) throws SQLException{
+    public Hora find(String hora) throws SQLException{
         String query = "SELECT * FROM hora WHERE hora_inicio = ?";
 
         try {
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setTime(1, Time.valueOf(hora));
+            preparedStatement.setString(1, hora);
 
             resultSet = preparedStatement.executeQuery();
 
             if(resultSet.next()){
                 return new Hora(
-                        resultSet.getTime("hora_inicio").toLocalTime());
+                        resultSet.getString("hora_inicio"));
             }
             return null;
         } catch (SQLException e) {
@@ -108,7 +108,7 @@ public class HoraDAO {
 
             while(resultSet.next()){
                 horasData.add(new Hora(
-                        resultSet.getTime("hora_inicio").toLocalTime()
+                        resultSet.getString("hora_inicio")
                 ));
             }
             return horasData;

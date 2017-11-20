@@ -5,10 +5,15 @@ public class Sala {
     private String descricao_sala;
     private Integer capacidade_sala;
 
+    //only for setValue of ComboBox on EnsalamentoEditar
+    public Sala(int numero_sala){
+        setNumero_sala(numero_sala);
+    }
+
     public Sala(int numero_sala, String descricao_sala, int capacidade_sala){
-        this.numero_sala = numero_sala;
-        this.descricao_sala = descricao_sala;
-        this.capacidade_sala = capacidade_sala;
+       setNumero_sala(numero_sala);
+       setDescricao_sala(descricao_sala);
+       setCapacidade_sala(capacidade_sala);
     }
 
     public Integer getNumero_sala() {
@@ -33,5 +38,10 @@ public class Sala {
 
     public void setCapacidade_sala(Integer capacidade_sala) {
         this.capacidade_sala = capacidade_sala;
+    }
+
+    @Override
+    public String toString(){
+        return getNumero_sala().toString();
     }
 }

@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx_salage.model.Usuario;
 
 /**
  * FXML Controller class
@@ -57,22 +58,42 @@ public class LoginController implements Initializable {
     public void btnEntrarAction (ActionEvent event){
         try {
             if(loginDAO.isLogin(txtLogin.getText(), txtSenha.getText())){
-                try {
-                    ((Node)event.getSource()).getScene().getWindow().hide();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/Dashboard.fxml"));
-                    Parent root = fxmlLoader.load();
-                    Stage stage = new Stage();
-                    stage.initStyle(StageStyle.DECORATED);
-                    stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
-                    stage.setScene(new Scene(root));
-                    stage.setResizable(false);
-                    stage.centerOnScreen();
-                    stage.setTitle("SALAGE - Dashboard");
-                    stage.show();
+                Usuario u = loginDAO.getUsuario(txtLogin.getText());
+                if(u.getId_ace() == 1) {
+                    try {
+                        ((Node) event.getSource()).getScene().getWindow().hide();
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/DashboardADM.fxml"));
+                        Parent root = fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.initStyle(StageStyle.DECORATED);
+                        stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
+                        stage.setScene(new Scene(root));
+                        stage.setResizable(false);
+                        stage.centerOnScreen();
+                        stage.setTitle("SALAGE - Dashboard (ADM)");
+                        stage.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
-                catch (Exception e) {
-                    e.printStackTrace();
+                else{
+                    try {
+                        ((Node) event.getSource()).getScene().getWindow().hide();
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/DashboardCMM.fxml"));
+                        Parent root = fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.initStyle(StageStyle.DECORATED);
+                        stage.getIcons().add(new Image(getClass().getResourceAsStream("../images/appicon.png")));
+                        stage.setScene(new Scene(root));
+                        stage.setResizable(false);
+                        stage.centerOnScreen();
+                        stage.setTitle("SALAGE - Dashboard");
+                        stage.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
+
             }
             else if(txtLogin.getText().isEmpty() && txtSenha.getText().isEmpty())
                 lblStatus.setText("Preencha os campos!");
